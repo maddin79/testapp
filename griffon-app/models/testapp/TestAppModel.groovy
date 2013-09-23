@@ -3,7 +3,6 @@ package testapp
 import groovy.beans.Bindable
 
 class TestAppModel {
-   // @Bindable String propName
-   boolean firstStart
-   @Bindable String count
+   @Bindable String username
+   @Bindable String password
 }

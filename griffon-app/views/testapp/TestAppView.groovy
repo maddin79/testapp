@@ -1,5 +1,14 @@
 package testapp
 
+actions {
+    action(id: 'okAction',
+       name: 'Ok',
+       closure: controller.login,
+       mnemonic: 'K',
+       shortDescription: 'Ok'
+    )
+}
+
 application(title: 'TestApp',
   preferredSize: [320, 240],
   pack: true,
@@ -9,6 +18,8 @@ application(title: 'TestApp',
   iconImages: [imageIcon('/griffon-icon-48x48.png').image,
                imageIcon('/griffon-icon-32x32.png').image,
                imageIcon('/griffon-icon-16x16.png').image]) {
-    // add content here
-    label(model.count) // delete me
+    
+    panel() {
+        button(okAction)
+    }
 }

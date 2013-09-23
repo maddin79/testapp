@@ -9,6 +9,13 @@ application {
     //frameClass = 'javax.swing.JFrame'
 }
 mvcGroups {
+    // MVC Group for "mainView"
+    'mainView' {
+        model      = 'testapp.MainViewModel'
+        view       = 'testapp.MainView'
+        controller = 'testapp.MainViewController'
+    }
+
     // MVC Group for "firstUser"
     'firstUser' {
         model      = 'testapp.FirstUserModel'

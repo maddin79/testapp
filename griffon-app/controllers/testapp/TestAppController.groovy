@@ -5,25 +5,25 @@ class TestAppController {
     def model
     def view
 
-    def onStartupEnd = { app ->
+    def onReadyEnd = { app ->
         withHibernate4 { String dataSourceName, session ->
             List<Person> tmpList = []
             tmpList.addAll session.createQuery('from Person').list()
             if(tmpList.empty){
                 withMVCGroup('firstUser') { m, v, c ->  
-                    m.title = 'Add a new user'  
-                    // m.message = 'Hallo'  
+                    m.title = 'Add a new user'
                     c.show() 
                 }
             }
-            tmpList.addAll session.createQuery('from Person').list()
-            model.count = tmpList.size().toString()
-        }
-        
+        }        
     }
     
     void mvcGroupInit(Map args) {
         
+    }
+    
+    def login = {
+        createMVCGroup 'mainView'
     }
 
     // void mvcGroupDestroy() {

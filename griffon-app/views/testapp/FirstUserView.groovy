@@ -16,18 +16,16 @@ actions {
 }
 
 panel(id: 'content') {
-    
+    migLayout(layoutConstraints: 'fill')
     
     label 'Name:'
-    textField columns: 20, text: bind('name', target: model)
+    textField columns: 20, text: bind('name', target: model), constraints: 'growx, wrap'
     label 'Password:'
-    passwordField columns: 20, text: bind('password', target: model)
+    passwordField columns: 20, text: bind('password', target: model), constraints: 'growx, wrap'
     
-    panel() {
-        gridLayout(cols: 2, rows: 1)
-        button(cancelAction)
-        button(okAction)
-    }
+    button cancelAction 
+    button okAction
+    
     
     keyStrokeAction(component: current,
         keyStroke: "ESCAPE",

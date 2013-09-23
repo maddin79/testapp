@@ -46,7 +46,14 @@ class FirstUserController {
             p.name = model.name
             p.password = model.password
             
-            session.save(p)            
+            session.save(p)
+            
+            List<Person> tmpList = []
+            tmpList.addAll session.createQuery('from Person').list()
+            int count = tmpList.size()
+            println("Count: " + count)
+            app.models['testApp'].count = count
+            println app.models['testApp'].count
         }   
         
         hide()
