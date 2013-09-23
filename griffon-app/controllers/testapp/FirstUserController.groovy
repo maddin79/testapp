@@ -39,4 +39,16 @@ class FirstUserController {
         app.windowManager.hide(dialog)
         dialog = null
     }
+    
+    def saveUser = { evt = null ->
+        withHibernate4 { String dataSourceName, session ->
+            Person p = new Person()
+            p.name = model.name
+            p.password = model.password
+            
+            session.save(p)            
+        }   
+        
+        hide()
+    }
 }

@@ -10,5 +10,5 @@ application(title: 'TestApp',
                imageIcon('/griffon-icon-32x32.png').image,
                imageIcon('/griffon-icon-16x16.png').image]) {
     // add content here
-    label('Login') // delete me
+    label(model.count) // delete me
 }

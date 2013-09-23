@@ -16,7 +16,10 @@ class TestAppController {
                     c.show() 
                 }
             }
+            tmpList.addAll session.createQuery('from Person').list()
+            model.count = tmpList.size().toString()
         }
+        
     }
     
     void mvcGroupInit(Map args) {

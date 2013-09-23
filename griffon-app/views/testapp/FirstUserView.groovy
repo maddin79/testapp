@@ -9,16 +9,21 @@ actions {
     )
     action(id: 'okAction',
        name: 'Ok',
-       closure: controller.hide,
+       closure: controller.saveUser,
        mnemonic: 'K',
        shortDescription: 'Ok'
     )
 }
 
 panel(id: 'content') {
-    borderLayout()
-    label('Content goes here', constraints: CENTER)
-    panel(constraints: SOUTH) {
+    
+    
+    label 'Name:'
+    textField columns: 20, text: bind('name', target: model)
+    label 'Password:'
+    passwordField columns: 20, text: bind('password', target: model)
+    
+    panel() {
         gridLayout(cols: 2, rows: 1)
         button(cancelAction)
         button(okAction)

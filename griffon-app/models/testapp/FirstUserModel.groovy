@@ -8,4 +8,6 @@ class FirstUserModel {
     @Bindable int height = 0
     @Bindable boolean resizable = true
     @Bindable boolean modal = true
+    @Bindable String name = ''
+    @Bindable String password = ''
 }
