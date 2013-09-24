@@ -2,7 +2,7 @@ package testapp
 
 actions {
     action(id: 'cancelAction',
-       name: 'Cancel',
+       name: app.getMessage('button.cancel'),
        closure: controller.hide,
        mnemonic: 'C',
        shortDescription: 'Cancel'

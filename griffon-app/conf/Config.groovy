@@ -13,3 +13,7 @@ log4j = {
            'griffon.app'
 }
 
+
+
+i18n.basename = 'messages'
+i18n.basenames = ['messages']
