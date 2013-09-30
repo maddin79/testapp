@@ -19,7 +19,7 @@ application(title: 'TestApp',
                imageIcon('/griffon-icon-32x32.png').image,
                imageIcon('/griffon-icon-16x16.png').image]) {
     
-    panel() {
+    panel(id: 'content') {
         button(okAction)
     }
 }

@@ -2,10 +2,11 @@ package testapp
 
 actions {
     action(id: 'cancelAction',
-       name: app.getMessage('button.cancel'),
+       name: app.getMessage('FirstUserView.button.cancel.label') ?:'Cancel',
        closure: controller.hide,
-       mnemonic: 'C',
-       shortDescription: 'Cancel'
+       mnemonic: app.getMessage('FirstUserView.button.cancel.mnemonic') ?:'C',
+       accelerator: shortcut(app.getMessage('FirstUserView.button.cancel.accelerator') ?: 'C'),
+       shortDescription: app.getMessage('FirstUserView.button.cancel.tooltip') ?:'Cancel creation'
     )
     action(id: 'okAction',
        name: 'Ok',

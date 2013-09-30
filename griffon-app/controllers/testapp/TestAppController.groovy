@@ -23,7 +23,7 @@ class TestAppController {
     }
     
     def login = {
-        createMVCGroup 'mainView'
+        view.content build(mainView)
     }
 
     // void mvcGroupDestroy() {

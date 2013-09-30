@@ -16,4 +16,4 @@ log4j = {
 
 
 i18n.basename = 'messages'
-i18n.basenames = ['messages']
+i18n.basenames = ['messages','views']
